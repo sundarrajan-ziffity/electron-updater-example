@@ -1,0 +1,9 @@
+appId: com.bons.electron-builder
+productName: BonsApp
+publish:
+  provider: github
+  token: YOUR_KEY
+nsis:
+  perMachine: true
+  allowToChangeInstallationDirectory: false
+  oneClick: false

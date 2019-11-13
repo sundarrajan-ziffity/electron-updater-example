@@ -1,0 +1,34 @@
+{
+  "name": "builder_update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win -p never",
+    "deploy": "electron-builder build --win -p always",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.2.0"
+  },
+  "build": {
+    "appId": "com.bons.electron-builder",
+    "productName": "BonsApp",
+    "publish": {
+      "provider": "github",
+      "token": "a6314e999291ee36f1790d5d7ee409ce5cd6cd6c"
+    },
+    "nsis": {
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": false,
+      "oneClick": false
+    }
+  }
+}
